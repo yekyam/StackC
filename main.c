@@ -55,11 +55,14 @@ int stack_get_int(int *ptr) {
 
 int main(void) {
 	int *mystack = stack_create_int(3);
+
 	stack_push_int(mystack, 5);
 	stack_push_int(mystack, 10);
+	
 	int a = stack_get_int(mystack);
 	stack_pop_int(mystack);
 	int b = stack_get_int(mystack);
+	
 	printf("%d, %d",a, b);
   stack_delete_int(mystack);
   return 0;
